@@ -1,0 +1,9 @@
+body {
+    margin:0;
+}
+@font-face {
+    font-family: "Muli";
+    src: url("../assets/fonts/Muli.ttf") format("ttf");
+  }
+
+@import "topbar/topbar";
