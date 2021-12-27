@@ -1,34 +1,3 @@
-body {
-  margin: 0;
-}
-
-@font-face {
-  font-family: "Muli";
-  src: url("../assets/fonts/Muli.ttf") format("ttf");
-}
-
-.topbar {
-  padding: 10px;
-  background-color: #163967;
-}
-
-.topbar__link {
-  display: inline-block;
-  font-family: "Muli", sans-serif;
-  font-size: 13px;
-  color: white;
-  text-decoration: none;
-  margin-right: 12px;
-}
-
-.topbar__link:hover {
-  color: #e3b576;
-}
-
-.topbar__icon {
-  margin-right: 15px;
-}
-
 .mainnav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,4 +80,4 @@ body {
   cursor: pointer;
   color: #e3b576;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=mainnav.css.map */

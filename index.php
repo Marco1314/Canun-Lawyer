@@ -63,5 +63,47 @@
         </div>
     </div>
 
+    <!-- Navigation -->
+    <?php
+        get_template_part('content/navigation');
+    ?>
+
+
+
+
+
+
+    <!-- Content -->
+
+    <?php
+
+// Check value exists.
+if( have_rows('content') ):
+
+    // Loop through rows.
+    while ( have_rows('content') ) : the_row();
+
+        // Case: Paragraph layout.
+        if( get_row_layout() == 'paragraph' ):
+            $text = get_sub_field('text');
+            // Do something...
+
+        // Case: Download layout.
+        elseif( get_row_layout() == 'download' ): 
+            $file = get_sub_field('file');
+            // Do something...
+
+        endif;
+
+    // End loop.
+    endwhile;
+
+// No value.
+else :
+    // Do something...
+endif;
+?>
+
+    
 <?php get_footer(); ?>
 </body>

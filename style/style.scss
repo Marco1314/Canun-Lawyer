@@ -6,4 +6,5 @@ body {
     src: url("../assets/fonts/Muli.ttf") format("ttf");
   }
 
-@import "topbar/topbar";
+  @import "topbar/topbar";
+  @import "navigation/mainnav";

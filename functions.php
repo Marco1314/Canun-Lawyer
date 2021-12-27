@@ -3,9 +3,9 @@
  
         function mytheme_register_nav_menu(){
             register_nav_menus( array(
-                'Topbar' => __( 'Topbar' ),
+                'mainnav' => __( 'Hauptnavigation' )
             ) );
         }
-        add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
+        add_action( 'after_setup_theme', 'mytheme_register_nav_menu' );
     }
 ?>
