@@ -1,0 +1,50 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+
+    &__image {
+        width:100%;
+        filter: brightness(50%);
+    }
+    &__text {
+        color:black;
+        font-family: "Muli", sans-serif;
+
+        @media screen and (min-width: 780px) {
+            color:white;
+            font-size: 25px;
+        }
+    }
+    &__headline {
+        color:black;
+        font-family: "Cormorant Garamond", serif;
+
+        @media screen and (min-width: 780px) {
+            color:white;
+            font-size: 50px;
+        }
+    }
+    .container {
+        margin-top:100px;
+
+        @media screen and (min-width: 780px) {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left:150px;   
+            margin-top:0;
+        }
+    }
+
+    &__button {
+        background-color:#dca354;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top:15px;
+        padding-bottom:15px;
+        margin-top:40px;
+        color:#070143;
+        display: inline-block;
+        text-decoration:none;
+    }
+}

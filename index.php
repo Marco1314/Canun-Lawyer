@@ -84,16 +84,105 @@ if( have_rows('content') ):
     while ( have_rows('content') ) : the_row();
 
         // Case: Paragraph layout.
-        if( get_row_layout() == 'paragraph' ):
-            $text = get_sub_field('text');
+        if( get_row_layout() == 'slider' ):
+            $headline_type = get_sub_field('headline_type');
+
+            if( have_rows('slider-content') ):
+
+                // Loop through rows.
+                while( have_rows('slider-content') ) : the_row();
+            
+                    // Load sub field value.
+                    $image = get_sub_field('bild');
+                    $headline = get_sub_field('headline');
+                    $text = get_sub_field('text');
+                    $btntxt = get_sub_field('button_text');
+                    $btnurl = get_sub_field('button_url');
+                    // Do something...
+            ?>
+                <div class="slider">
+                    <div class="slider__content">
+                        <img src="<?php echo $image ?>" class="slider__image">
+                        <div class="container">
+                            <div class="row justify-content-center text-center justify-content-md-start text-md-start">
+                                <div class="col-9">
+                                     <<?php echo $headline_type ?> class="slider__headline"><?php echo $headline ?></<?php echo $headline_type ?>>
+                                </div>
+                                <div class="col-9">
+                                <p class="slider__text"><?php echo $text ?></p>
+                                <?php if($btnurl) { ?> <a href="<?php echo $btnurl ?>" class="slider__button"><?php echo $btntxt ?></a><?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                // End loop.
+                endwhile;
+            
+            // No value.
+            else :
+                // Do something...
+            endif;
             // Do something...
 
-        // Case: Download layout.
-        elseif( get_row_layout() == 'download' ): 
-            $file = get_sub_field('file');
+
+        endif;
+
+        if( get_row_layout() == 'karten' ):
+            if( have_rows('cards') ):
+            ?>
+            <div class="cards">
+                <div class="d-flex flex-column align-items-center flex-md-row align-items-md-start justify-content-md-center">
+                <?php
+                // Loop through rows.
+                while( have_rows('cards') ) : the_row();
+            
+                    // Load sub field value.
+                    $headline = get_sub_field('headline');
+                    $text = get_sub_field('text');
+                    $icon = get_sub_field('image');
+                    // Do something...
+                    ?>  
+                    <div class="cards__element">
+                        <div class="d-flex align-items-center">
+                            <img src="<?php echo $icon; ?>" class="cards__image">
+                        </div>
+
+                        <div class="cards__content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-9">
+                                    <p class="cards__headline"><?php echo $headline; ?></p>
+                                    <p class="cards__text"><?php echo $text; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                // End loop.
+                endwhile;
+                ?>
+                </div>
+                </div>
+                <?php
+
+            
+            // No value.
+            else :
+                // Do something...
+            endif;
             // Do something...
 
         endif;
+
+    ?>
+
+
+<?php
+
+/** add Element **/
 
     // End loop.
     endwhile;
