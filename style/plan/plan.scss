@@ -1,0 +1,35 @@
+.plan {
+    margin-top:150px;
+
+    &__content {
+        font-family: "Muli", sans-serif;
+        text-align:center;
+        position:relative;
+
+        &::before {
+            display:none;
+
+            @media screen and (min-width: 550px){
+                content:"";
+                position:absolute;
+                width:10px;
+                height:80px;
+                background-color:#e3b576;
+                left:40px;
+                display:block;   
+            }
+        }
+    }
+    &__headline {
+        margin-bottom: 40px;
+
+        @media (min-width: 720px) {
+            text-align: left;
+        }
+    }
+    &__text {
+        @media (min-width: 720px) {
+            text-align: right;
+        }
+    }
+}

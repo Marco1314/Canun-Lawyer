@@ -1,0 +1,42 @@
+.plan {
+  margin-top: 150px;
+}
+
+.plan__content {
+  font-family: "Muli", sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.plan__content::before {
+  display: none;
+}
+
+@media screen and (min-width: 550px) {
+  .plan__content::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: #e3b576;
+    left: 40px;
+    display: block;
+  }
+}
+
+.plan__headline {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 720px) {
+  .plan__headline {
+    text-align: left;
+  }
+}
+
+@media (min-width: 720px) {
+  .plan__text {
+    text-align: right;
+  }
+}
+/*# sourceMappingURL=plan.css.map */

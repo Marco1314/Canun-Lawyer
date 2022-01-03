@@ -1,0 +1,57 @@
+.contact {
+    padding:50px;
+    margin-top:150px;
+
+    @media screen and (min-width: 768px) {
+        padding:0;
+    }
+    
+    &__form {
+        display:flex;
+        flex-direction:column;
+        border: 20px solid #9b8179;
+        padding:50px;
+
+        input, textarea {
+            border-top:none;
+            border-left:none;
+            border-right:none;
+            border-bottom:1px solid gray;
+            padding:10px;
+
+            &:focus-visible {
+                border-top:none;
+                border-left:none;
+                border-right:none;
+                outline:none;
+            }
+            @media screen and (min-width: 768px) {
+                padding-top:20px;
+                padding-bottom:20px;
+            }
+        }
+    }
+
+    &__button {
+        background-color:#e3b576;
+        border-radius:100000px;
+        padding:20px;
+        margin-top:25px;
+        text-align:center;
+        color:#070143;
+        display:inline !important;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__content {
+        margin-top:70px;
+        font-family: "Muli", sans-serif;
+    }
+    &__headline {
+        &--special {
+            margin-bottom:25px;
+        }
+    }
+}
