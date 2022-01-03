@@ -244,7 +244,62 @@ if (have_rows('topbar-left')):
                                 </div>
                             </div>
 <?php
+                            if( have_rows('plans') ):
+?>
+                            <div class="container d-flex flex-column align-items-center d-md-block">
+                                <div class="plans">
+<?php
+
+                                // Loop through rows.
+                                while( have_rows('plans') ) : the_row();
+                            
+                                    // Load sub field value.
+                                    $image = get_sub_field('image');
+                                    $text = get_sub_field('text');
+                                    $btntxt = get_sub_field('button_text');
+                                    $btnurl = get_sub_field('button_url');
+                                    $headline = get_sub_field('headline');
+?>
+                                    <div class="plans__item">
+                                        <div class="plans-image">
+                                            <img src="<?php echo $image ?>" alt="" class="plans__image">
+                                        </div>
+                                        <div class="plans__content">
+                                            <h5 class="plans__headline"><?php echo $headline ?></h5>
+                                            <p class="plans__text"><?php echo $text ?></p>
+
+                                            <div class="d-flex justify-content-center w-100">
+                                                <?php if($btntxt) {?>
+                                                    <a class="plans__button" href="<?php echo $btnurl ?>"><?php echo $btntxt ?></a>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+<?php
+                            
+                                // End loop.
+                                endwhile;
+?>
+                                </div>
+                            </div>
+<?php
+                            
+                            // No value.
+                            else :
+                                // Do something...
+                            endif;
+?>
+<?php
                         endif;
+
+
+
+
+
+
+
+
+
 
                         
                     // End loop.

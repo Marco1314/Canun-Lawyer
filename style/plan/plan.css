@@ -8,22 +8,6 @@
   position: relative;
 }
 
-.plan__content::before {
-  display: none;
-}
-
-@media screen and (min-width: 550px) {
-  .plan__content::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 80px;
-    background-color: #e3b576;
-    left: 40px;
-    display: block;
-  }
-}
-
 .plan__headline {
   margin-bottom: 40px;
 }
@@ -38,5 +22,68 @@
   .plan__text {
     text-align: right;
   }
+}
+
+.plans {
+  margin-top: 100px;
+  display: block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 720px) {
+  .plans {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.plans__item {
+  width: 400px;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 720px) {
+  .plans__item {
+    margin: 0px;
+  }
+}
+
+.plans__content {
+  padding: 25px;
+  background-color: #f9f9f9;
+}
+
+.plans__image {
+  width: 100%;
+}
+
+.plans__headline {
+  font-family: "Muli", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.plans__text {
+  color: #687693;
+  text-align: center;
+  font-family: "Muli", sans-serif;
+}
+
+.plans__button {
+  text-align: center;
+  text-decoration: none;
+  font-family: "Muli", sans-serif;
+  padding: 10px;
+  background-color: #e3b576;
+  color: white;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.plans__button:hover {
+  color: white;
 }
 /*# sourceMappingURL=plan.css.map */
