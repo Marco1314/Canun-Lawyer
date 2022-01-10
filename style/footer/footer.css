@@ -1,0 +1,53 @@
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  background-color: #29395b;
+  padding: 60px;
+}
+
+.footer__logo {
+  width: 120px;
+}
+
+.footer__text {
+  margin-top: 30px;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.footer__icon {
+  margin-left: 10px;
+}
+
+.footer__icon:first-of-type {
+  margin: 0;
+}
+
+.footer__headline {
+  font-family: "Muli", sans-serif;
+  font-size: 25px;
+  color: white;
+}
+
+.footer__links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__links li {
+  color: white;
+  font-family: "Muli", sans-serif;
+}
+
+.footer__links li a {
+  color: white;
+  font-family: "Muli", sans-serif;
+  text-decoration: none;
+}
+
+.footer__links li a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=footer.css.map */

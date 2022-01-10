@@ -1,0 +1,48 @@
+.footer {
+    margin-top:100px;
+    width:100%;
+    background-color: #29395b;
+    padding:60px;
+
+    &__logo {
+        width:120px;
+    }
+
+    &__text {
+        margin-top:30px;
+        font-family: "Muli", sans-serif;
+        font-size:16px;
+        color:white;
+    }
+    &__icon {
+        margin-left:10px;
+
+        &:first-of-type {
+            margin:0;
+        }
+    }
+    &__headline {
+        font-family: "Muli", sans-serif;
+        font-size: 25px;
+        color:white;
+    }
+    &__links {
+        list-style-type: none;
+        padding:0;
+        margin:0;
+
+        li {
+            color:white;
+            font-family: "Muli", sans-serif;
+            a {
+                color:white;
+                font-family: "Muli", sans-serif;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
