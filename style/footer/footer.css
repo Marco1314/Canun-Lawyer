@@ -50,4 +50,8 @@
 .footer__links li a:hover {
   text-decoration: underline;
 }
+
+.footer .col-12 {
+  margin-top: 30px;
+}
 /*# sourceMappingURL=footer.css.map */

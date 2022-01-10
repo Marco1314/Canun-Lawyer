@@ -185,6 +185,10 @@ body {
   text-decoration: none;
 }
 
+.slider__button:hover {
+  color: #070143;
+}
+
 .cards__element {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,5 +438,9 @@ body {
 
 .footer__links li a:hover {
   text-decoration: underline;
+}
+
+.footer .col-12 {
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

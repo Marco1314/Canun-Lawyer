@@ -34,7 +34,7 @@
           ?>
         </div>
     </div>
-    <div class="col-12 col-md-4 d-flex flex-column align-items-center">
+    <div class="col-12 col-md-4 d-md-flex flex-md-column align-items-md-center">
       <div>
         <h5 class="footer__headline">Our Services</h5>
             <ol class="footer__links">
